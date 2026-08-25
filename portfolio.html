@@ -7,14 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   EDIT GUIDE
-   - Search "[Your Name]" and replace everywhere with your name.
-   - Placeholder projects/certs/experience are marked with
-     "EDIT:" comments in the HTML body below — swap in your own.
-   - Colors/fonts live in :root if you want to retheme later.
-   ============================================================ */
-
 :root{
   --desktop-bg:#008080;
   --face:#c0c0c0;
@@ -31,7 +23,6 @@
   --font-body: "Inter", -apple-system, sans-serif;
   --taskbar-h: 34px;
 
-  /* portfolio-page theme (the site rendered inside the browser window) */
   --pg-pink:#ec1a6f;
   --pg-orange:#f7941d;
   --pg-purple:#5b3df5;
@@ -53,7 +44,6 @@ button{ font-family:inherit; }
 a{ color:var(--link); }
 :focus-visible{ outline:2px solid #ffbf00; outline-offset:1px; }
 
-/* ---------- bevel utility classes (the core Win98 look) ---------- */
 .win98-raised{
   border:2px solid;
   border-color: var(--white) var(--black) var(--black) var(--white);
@@ -81,7 +71,6 @@ a{ color:var(--link); }
   box-shadow: inset 1px 1px 0 var(--shadow), inset -1px -1px 0 var(--face-light);
 }
 
-/* ---------- boot screen ---------- */
 #boot-screen{
   position:fixed; inset:0; background:#000; color:#c0c0c0;
   font-family:"Courier New", monospace; font-size:14px;
@@ -101,7 +90,6 @@ a{ color:var(--link); }
 .blink{ animation: blink 1s step-end infinite; }
 @keyframes blink{ 50%{ opacity:0; } }
 
-/* ---------- desktop ---------- */
 #desktop{
   position:relative; width:100%; height:100%;
   display:none;
@@ -129,7 +117,6 @@ a{ color:var(--link); }
 .icon.selected span{ background:#000080; }
 .icon.selected{ border-color:#fff; }
 
-/* ---------- windows ---------- */
 .window{
   position:absolute;
   display:none;
@@ -175,7 +162,6 @@ a{ color:var(--link); }
   flex:0 0 auto; font-size:11px; padding:3px 6px; margin-top:3px;
 }
 
-/* browser window content */
 .browser-toolbar{ flex:0 0 auto; padding:4px; margin-bottom:2px; }
 .address-bar{ padding:4px 6px; font-size:12px; display:flex; align-items:center; gap:6px; }
 
@@ -186,11 +172,9 @@ a{ color:var(--link); }
 .page h1,.page h2,.page h3{ font-family:var(--font-display); font-weight:400; margin:0 0 12px; text-transform:uppercase; letter-spacing:.01em; }
 .grad-text{ background:linear-gradient(90deg,var(--pg-pink),var(--pg-orange)); -webkit-background-clip:text; background-clip:text; color:transparent; }
 
-/* gridpaper section backgrounds */
 .grid-bg-pink{ background-color:#fbf1f4; background-image:linear-gradient(var(--pg-grid-pink) 1px,transparent 1px),linear-gradient(90deg,var(--pg-grid-pink) 1px,transparent 1px); background-size:34px 34px; }
 .grid-bg-cream{ background-color:#f7f2df; background-image:linear-gradient(var(--pg-grid-cream) 1px,transparent 1px),linear-gradient(90deg,var(--pg-grid-cream) 1px,transparent 1px); background-size:34px 34px; }
 
-/* nav */
 .page-nav{
   position:sticky; top:0; z-index:30; display:flex; align-items:center; justify-content:space-between;
   padding:16px 40px; background:rgba(255,255,255,.82); color:#161616; backdrop-filter:blur(8px);
@@ -203,13 +187,11 @@ a{ color:var(--link); }
 .page-nav .nav-links a:hover{ color:#161616; }
 .page-nav .nav-cta{ background:var(--pg-pink); color:#fff; padding:9px 18px; border-radius:999px; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; letter-spacing:.03em; text-transform:uppercase; }
 
-/* eyebrow / numbered section labels */
 .eyebrow{ display:flex; align-items:center; gap:10px; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#888; font-weight:700; margin-bottom:14px; }
 .eyebrow .num{ color:var(--pg-pink); }
 .eyebrow .rule{ width:34px; height:2px; background:var(--pg-pink); display:inline-block; }
 .hero .eyebrow{ color:#666; }
 
-/* hero */
 .hero{
   padding:56px 48px 0 !important; overflow:hidden; position:relative;
   background:
@@ -258,7 +240,6 @@ a{ color:var(--link); }
 
 .hint{ font-size:12px; color:#888; margin-top:18px; font-style:italic; }
 
-/* ---- about: step wizard ---- */
 .wizard-card{
   max-width:700px; margin:26px auto 0; background:#fdfbf7; border-radius:26px;
   padding:44px 44px 32px; box-shadow:0 18px 40px -20px rgba(0,0,0,.15);
@@ -293,7 +274,6 @@ a{ color:var(--link); }
 .wizard-btn.back{ background:transparent; color:#888; }
 .wizard-btn:disabled{ opacity:0; pointer-events:none; }
 
-/* numbered project rows */
 .item-list{ margin-top:30px; }
 .item-row{ display:grid; grid-template-columns:1fr auto; gap:18px; padding:30px 0; border-top:1px solid #e7e2d8; align-items:start; position:relative; padding-left:22px; }
 .item-list .item-row:last-child{ border-bottom:1px solid #e7e2d8; }
@@ -302,8 +282,7 @@ a{ color:var(--link); }
 .item-row .idx{ font-size:11px; color:#aaa; font-weight:700; letter-spacing:.05em; margin-bottom:4px; }
 .item-row h3{
   font-size:clamp(28px,4vw,44px); margin:0 0 10px; text-transform:uppercase; line-height:1;
-  background:linear-gradient(90deg,var(--pg-pink),var(--pg-orange)); -webkit-background-clip:text; background-clip:text; color:transparent;
-}
+  background:linear-gradient(90deg,var(--pg-pink),var(--pg-orange)); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .item-row p{ font-size:13.5px; color:#555; margin:0 0 12px; max-width:620px; }
 .item-row a.src{ font-size:12px; font-weight:700; color:var(--pg-pink); text-decoration:none; letter-spacing:.02em; }
 .item-row .side{ text-align:right; display:flex; align-items:center; gap:14px; flex:0 0 auto; }
@@ -314,7 +293,6 @@ a{ color:var(--link); }
 }
 .item-row:hover .arrow{ background:var(--pg-pink); border-color:var(--pg-pink); color:#fff; }
 
-/* experience-only hover tooltip (categorizes each role) — scoped so it never touches projects rows */
 #experience-anchor .item-row{ cursor:default; }
 #experience-anchor .item-row[data-tooltip]::after{
   content:attr(data-tooltip);
@@ -325,7 +303,6 @@ a{ color:var(--link); }
 }
 #experience-anchor .item-row[data-tooltip]:hover::after{ opacity:1; transform:translateY(0); }
 
-/* skills / expertise — hover-reveal cards */
 .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; margin-top:30px; }
 .exp-card{
   position:relative; height:250px; border-radius:22px; overflow:hidden; isolation:isolate;
@@ -369,14 +346,12 @@ a{ color:var(--link); }
 .stack-panel{ margin-top:34px; background:#fdfbf3; border-radius:26px; padding:32px 30px; text-align:center; }
 .stack-panel .eyebrow{ justify-content:center; color:#999; }
 
-/* services */
 .service-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:30px; }
 .service-card{ background:#fff; padding:24px; border-radius:20px; border:1px solid #eee; }
 .service-card .idx{ font-family:var(--font-display); font-size:12px; color:#fff; background:var(--pg-pink); display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; margin-bottom:14px; }
 .service-card h3{ font-size:15.5px; margin-bottom:6px; text-transform:uppercase; }
 .service-card p{ font-size:13px; color:#555; margin:0; }
 
-/* contact */
 .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:30px; }
 .contact-form{ display:flex; flex-direction:column; gap:12px; }
 .contact-form input, .contact-form textarea{ font-family:var(--font-body); border:1px solid #ddd; padding:12px 14px; font-size:13.5px; border-radius:12px; background:#fdfbf3; }
@@ -404,7 +379,6 @@ a{ color:var(--link); }
   .wizard-card{ padding:30px 22px 24px; }
 }
 
-/* folder windows */
 .folder-body{ padding:14px; }
 .folder-grid{ display:flex; flex-wrap:wrap; gap:18px; }
 .file-icon{
@@ -421,7 +395,6 @@ a{ color:var(--link); }
 .detail-body p{ font-size:13.5px; color:#333; line-height:1.6; }
 .detail-body .links{ margin-top:14px; display:flex; gap:10px; }
 
-/* taskbar */
 #taskbar{
   position:absolute; left:0; right:0; bottom:0; height:var(--taskbar-h);
   display:flex; align-items:center; gap:6px; padding:3px 4px;
@@ -445,7 +418,6 @@ a{ color:var(--link); }
   font-size:12px; padding:4px 10px; height:26px; display:flex; align-items:center;
 }
 
-/* start menu */
 #start-menu{
   position:absolute; left:2px; bottom:calc(var(--taskbar-h) + 2px);
   width:210px; display:none; flex-direction:column; padding:3px; z-index:5000;
@@ -458,7 +430,6 @@ a{ color:var(--link); }
 .start-item:hover, .start-item:focus-visible{ background:var(--title-start); color:#fff; }
 .start-sep{ height:1px; background:var(--shadow); margin:3px 2px; box-shadow:0 1px 0 var(--face-light); }
 
-/* shutdown overlay */
 #shutdown-screen{
   position:fixed; inset:0; background:#008080; color:#fff; z-index:9998;
   display:none; align-items:center; justify-content:center; flex-direction:column; gap:18px;
@@ -478,7 +449,6 @@ a{ color:var(--link); }
 </head>
 <body>
 
-<!-- ============ BOOT SCREEN ============ -->
 <div id="boot-screen">
   <div>Mahnoor Ahmed Khan Portfolio OS</div>
   <div>Version 98.1</div>
@@ -489,14 +459,12 @@ a{ color:var(--link); }
   </div>
 </div>
 
-<!-- ============ SHUTDOWN EASTER EGG ============ -->
 <div id="shutdown-screen">
   <div style="font-size:20px;">It's now safe to close this tab.</div>
   <div style="font-size:13px;opacity:.85;">(Or don't — there's more to see.)</div>
   <button class="win98-btn" onclick="restart()">Restart Portfolio</button>
 </div>
 
-<!-- ============ DESKTOP ============ -->
 <div id="desktop">
 
   <div id="icons">
@@ -513,14 +481,13 @@ a{ color:var(--link); }
       <div class="glyph"><img src="FOLDER.png" alt=""></div><span>Experience</span>
     </div>
     <div class="icon" tabindex="0" data-open="contact">
-      <div class="glyph">✉️</div><span>Contact Me</span>
+      <div class="glyph"><img src="MAIL.png" alt=""></div><span>Contact Me</span>
     </div>
     <div class="icon" tabindex="0" data-open="recyclebin">
       <div class="glyph"><img src="BIN.png" alt=""></div><span>Recycle Bin</span>
     </div>
   </div>
 
-  <!-- ============ BROWSER WINDOW = the actual portfolio page ============ -->
   <div class="window win98-raised" id="win-browser" data-title="My Portfolio - Internet Explorer" style="width:820px;height:70vh;left:70px;top:30px;">
     <div class="title-bar">
       <div class="title-bar-text"><img class="ico-inline" src="BROWSER.png" alt="">Mahnoor Ahmed Khan Portfolio — Internet Explorer</div>
@@ -536,7 +503,6 @@ a{ color:var(--link); }
     <div class="window-body">
       <div class="page">
 
-        <!-- EDIT: nav -->
         <div class="page-nav">
           <div class="logo"><span class="dot"></span>MAHNOOR</div>
           <div class="nav-links">
@@ -549,7 +515,6 @@ a{ color:var(--link); }
           <a class="nav-cta" href="#" onclick="openWindow('contact');return false;">Let's Talk ↗</a>
         </div>
 
-        <!-- EDIT: hero -->
         <section class="hero">
           <div class="hero-inner">
             <div class="eyebrow">Hi, I'm</div>
@@ -574,7 +539,6 @@ a{ color:var(--link); }
           </div>
         </section>
 
-        <!-- EDIT: about — interactive 3-step wizard, mirrors the reference site's step card -->
         <section id="about-anchor" class="grid-bg-pink">
           <div class="eyebrow"><span class="num">01</span><span class="rule"></span> About Me</div>
           <div class="wizard-card">
@@ -615,7 +579,6 @@ a{ color:var(--link); }
           </div>
         </section>
 
-        <!-- EDIT: projects — replace with your own; these are placeholders shaped like real portfolio entries -->
         <section id="projects-anchor">
           <div class="eyebrow"><span class="num">02</span><span class="rule"></span> Selected Work</div>
           <h2 style="font-size:clamp(30px,5vw,48px);">Projects</h2>
@@ -682,7 +645,6 @@ a{ color:var(--link); }
           <p class="hint">More projects — including the AI Intelligent Checkers Board, Rush Hour Game (C++ and Assembly), and Bubble Shooter — are in the "Projects" folder on the desktop, or on <a href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">github.com/MahnoorAhmed999</a>.</p>
         </section>
 
-        <!-- EDIT: skills / expertise -->
         <section id="skills-anchor" class="grid-bg-cream">
           <div class="eyebrow"><span class="num">03</span><span class="rule"></span> Expertise</div>
           <h2 style="font-size:clamp(28px,4.5vw,44px);">Mastering the <span class="grad-text">Toolkit</span></h2>
@@ -765,7 +727,6 @@ a{ color:var(--link); }
           </div>
         </section>
 
-        <!-- EDIT: services -->
         <section id="services-anchor">
           <div class="eyebrow"><span class="num">04</span><span class="rule"></span> What I Do</div>
           <h2 style="font-size:clamp(28px,4.5vw,44px);">How I Can Help</h2>
@@ -793,7 +754,6 @@ a{ color:var(--link); }
           </div>
         </section>
 
-        <!-- EDIT: experience -->
         <section id="experience-anchor" class="grid-bg-pink">
           <div class="eyebrow"><span class="num">05</span><span class="rule"></span> Experience</div>
           <h2 style="font-size:clamp(28px,4.5vw,44px);">Where I've Worked</h2>
@@ -858,7 +818,6 @@ a{ color:var(--link); }
           <p class="hint">Hover any role for a quick category tag. Open the "Experience" folder on the desktop for full details, including FIS Graphic Designer.</p>
         </section>
 
-        <!-- EDIT: contact -->
         <section id="contact-anchor">
           <div class="eyebrow"><span class="num">06</span><span class="rule"></span> Get In Touch</div>
           <h2 style="font-size:clamp(28px,4.5vw,44px);">Let's work <span class="grad-text">together</span></h2>
@@ -866,7 +825,7 @@ a{ color:var(--link); }
             <div>
               <p style="color:#555;font-size:14px;max-width:380px;">Have a project in mind, an internship opening, or just want to chat about data science and design? I'd love to hear from you.</p>
               <div class="contact-row">
-                <a class="contact-chip" href="mailto:mahnoorahmed921@gmail.com">📧 mahnoorahmed921@gmail.com</a>
+                <a class="contact-chip" href="mailto:mahnoorahmed921@gmail.com"><img class="ico-inline" src="MAIL.png" alt=""> mahnoorahmed921@gmail.com</a>
                 <a class="contact-chip" href="https://www.linkedin.com/in/mahnoor-ds" target="_blank" rel="noopener">💼 LinkedIn</a>
                 <a class="contact-chip" href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">💻 GitHub</a>
               </div>
@@ -891,7 +850,6 @@ a{ color:var(--link); }
     <div class="status-bar win98-sunken">Done</div>
   </div>
 
-  <!-- ============ PROJECTS FOLDER ============ -->
   <div class="window win98-raised" id="win-projects" data-title="Projects" style="width:460px;height:360px;left:140px;top:90px;">
     <div class="title-bar">
       <div class="title-bar-text"><img class="ico-inline" src="FOLDER.png" alt="">Projects</div>
@@ -918,7 +876,6 @@ a{ color:var(--link); }
     <div class="status-bar win98-sunken">10 object(s)</div>
   </div>
 
-  <!-- ============ CERTIFICATES FOLDER ============ -->
   <div class="window win98-raised" id="win-certificates" data-title="Certificates" style="width:380px;height:300px;left:200px;top:130px;">
     <div class="title-bar">
       <div class="title-bar-text"><img class="ico-inline" src="FOLDER.png" alt="">Certificates</div>
@@ -937,7 +894,6 @@ a{ color:var(--link); }
     <div class="status-bar win98-sunken">2 object(s)</div>
   </div>
 
-  <!-- ============ EXPERIENCE FOLDER ============ -->
   <div class="window win98-raised" id="win-experience" data-title="Experience" style="width:420px;height:340px;left:260px;top:160px;">
     <div class="title-bar">
       <div class="title-bar-text"><img class="ico-inline" src="FOLDER.png" alt="">Experience</div>
@@ -962,10 +918,10 @@ a{ color:var(--link); }
     <div class="status-bar win98-sunken">8 object(s)</div>
   </div>
 
-  <!-- ============ CONTACT WINDOW ============ -->
+  <!-- Updated Contact Window with MAIL.png -->
   <div class="window win98-raised" id="win-contact" data-title="Contact Me" style="width:360px;height:300px;left:320px;top:110px;">
     <div class="title-bar">
-      <div class="title-bar-text">✉️ Contact Me</div>
+      <div class="title-bar-text"><img class="ico-inline" src="MAIL.png" alt="">Contact Me</div>
       <div class="title-btns">
         <button class="title-btn" onclick="minimizeWindow('contact')">_</button>
         <button class="title-btn" onclick="toggleMaximize('contact')">▢</button>
@@ -976,7 +932,7 @@ a{ color:var(--link); }
       <h2>Reach out</h2>
       <p>Happy to talk about projects, roles, or anything in between.</p>
       <div class="contact-row" style="margin-top:14px;">
-        <a class="contact-chip" href="mailto:mahnoorahmed921@gmail.com">📧 Email</a>
+        <a class="contact-chip" href="mailto:mahnoorahmed921@gmail.com"><img class="ico-inline" src="MAIL.png" alt=""> Email</a>
         <a class="contact-chip" href="https://www.linkedin.com/in/mahnoor-ds" target="_blank" rel="noopener">💼 LinkedIn</a>
         <a class="contact-chip" href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">💻 GitHub</a>
         <a class="contact-chip" href="#">📄 Résumé (PDF)</a>
@@ -984,7 +940,6 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <!-- ============ RECYCLE BIN (easter egg) ============ -->
   <div class="window win98-raised" id="win-recyclebin" data-title="Recycle Bin" style="width:320px;height:200px;left:400px;top:200px;">
     <div class="title-bar">
       <div class="title-bar-text"><img class="ico-inline" src="BIN.png" alt="">Recycle Bin</div>
@@ -1000,7 +955,6 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <!-- ============ PROJECT DETAIL WINDOWS ============ -->
   <div class="window win98-raised" id="win-proj-detail-1" data-title="Tarbella Guardian" style="width:440px;height:360px;left:180px;top:120px;">
     <div class="title-bar"><div class="title-bar-text">📄 Tarbella Guardian</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-1')">✕</button></div>
@@ -1115,7 +1069,6 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <!-- ============ CERTIFICATE DETAIL WINDOWS ============ -->
   <div class="window win98-raised" id="win-cert-detail-1" data-title="Bug Catcher" style="width:380px;height:260px;left:260px;top:140px;">
     <div class="title-bar"><div class="title-bar-text">📜 Bug Catcher.pdf</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('cert-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('cert-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('cert-detail-1')">✕</button></div>
@@ -1138,7 +1091,6 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <!-- ============ EXPERIENCE DETAIL WINDOWS ============ -->
   <div class="window win98-raised" id="win-exp-detail-1" data-title="STEM Instructor" style="width:420px;height:300px;left:300px;top:150px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ STEM Instructor</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-1')">✕</button></div>
@@ -1252,19 +1204,16 @@ a{ color:var(--link); }
     </div>
   </div>
 
-
-  <!-- ============ START MENU ============ -->
   <div id="start-menu" class="win98-raised">
     <button class="start-item" data-open="browser"><img class="ico-inline" src="BROWSER.png" alt="">My Portfolio</button>
     <button class="start-item" data-open="projects"><img class="ico-inline" src="FOLDER.png" alt="">Projects</button>
     <button class="start-item" data-open="certificates"><img class="ico-inline" src="FOLDER.png" alt="">Certificates</button>
     <button class="start-item" data-open="experience"><img class="ico-inline" src="FOLDER.png" alt="">Experience</button>
-    <button class="start-item" data-open="contact">✉️ Contact Me</button>
+    <button class="start-item" data-open="contact"><img class="ico-inline" src="MAIL.png" alt="">Contact Me</button>
     <div class="start-sep"></div>
     <button class="start-item" onclick="shutdown()">⏻ Shut Down...</button>
   </div>
 
-  <!-- ============ TASKBAR ============ -->
   <div id="taskbar">
     <button id="start-btn" class="win98-btn" onclick="toggleStartMenu(event)">🪟 Start</button>
     <div id="taskbar-windows"></div>
@@ -1376,7 +1325,6 @@ a{ color:var(--link); }
 
   document.querySelectorAll('.window').forEach(makeDraggable);
 
-  // desktop icons: click = select, dblclick = open
   document.querySelectorAll('#icons .icon').forEach(function(icon){
     icon.addEventListener('click', function(){
       document.querySelectorAll('#icons .icon').forEach(function(i){ i.classList.remove('selected'); });
@@ -1386,13 +1334,11 @@ a{ color:var(--link); }
     icon.addEventListener('keydown', function(e){ if(e.key === 'Enter') openWindow(icon.dataset.open); });
   });
 
-  // folder file icons
   document.querySelectorAll('.file-icon').forEach(function(f){
     f.addEventListener('dblclick', function(){ openWindow(f.dataset.open); });
     f.addEventListener('keydown', function(e){ if(e.key === 'Enter') openWindow(f.dataset.open); });
   });
 
-  // start menu
   var startMenu = document.getElementById('start-menu');
   window.toggleStartMenu = function(e){
     e.stopPropagation();
@@ -1408,7 +1354,6 @@ a{ color:var(--link); }
   var yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // clock
   function updateClock(){
     var el = document.getElementById('clock');
     var now = new Date();
@@ -1417,7 +1362,6 @@ a{ color:var(--link); }
   setInterval(updateClock, 1000);
   updateClock();
 
-  // shutdown easter egg
   window.shutdown = function(){
     closeStartMenu();
     document.getElementById('shutdown-screen').classList.add('visible');
@@ -1429,7 +1373,6 @@ a{ color:var(--link); }
     runBoot();
   };
 
-  // boot sequence
   function runBoot(){
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var boot = document.getElementById('boot-screen');
@@ -1446,7 +1389,6 @@ a{ color:var(--link); }
   }
   runBoot();
 
-  // ---- About wizard (inside the browser-window portfolio page) ----
   var wizardSteps = document.querySelectorAll('.wizard-step');
   var wizardProgress = document.getElementById('wizard-progress');
   var wizardIndex = 0;
@@ -1480,14 +1422,10 @@ a{ color:var(--link); }
   }
   window.wizardStep = function(dir){
     wizardIndex = Math.max(0, Math.min(wizardSteps.length - 1, wizardIndex + dir));
-    if(dir > 0 && wizardIndex === wizardSteps.length - 1 && document.getElementById('wizard-next').textContent === 'Done'){
-      // already on last step and pressed Done — just stay
-    }
     renderWizard();
   };
   renderWizard();
 
-  // ---- animate skill bars + hero stat counters when scrolled into view ----
   var animated = false;
   function animateOnce(){
     if(animated) return;
@@ -1520,7 +1458,6 @@ a{ color:var(--link); }
     });
   }
 
-  // ---- expertise cards: populate tool grids (icon + name) per category ----
   var DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
   var expertiseTools = {
     frontend: [
