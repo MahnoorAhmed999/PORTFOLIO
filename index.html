@@ -393,7 +393,15 @@ a{ color:var(--link); }
 .detail-body h2{ font-family:var(--font-display); margin:0 0 4px; font-size:19px; }
 .detail-body .meta{ font-size:12.5px; color:#666; margin-bottom:12px; }
 .detail-body p{ font-size:13.5px; color:#333; line-height:1.6; }
-.detail-body .links{ margin-top:14px; display:flex; gap:10px; }
+.detail-body .links{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; }
+.detail-body .status-pill{ display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:999px; background:#fff4d6; color:#8a6100; border:1px solid #e8c968; margin-bottom:8px; }
+.materials-list{ font-size:13.5px; color:#333; padding-left:18px; margin:8px 0 0; line-height:1.6; }
+.detail-gallery{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.detail-gallery .img-slot{ width:108px; height:78px; border:1px dashed #aaa; background:#f4f4f4; display:flex; align-items:center; justify-content:center; font-size:9.5px; color:#888; text-align:center; padding:4px; border-radius:2px; line-height:1.3; }
+.detail-gallery .img-slot.landscape{ width:220px; height:130px; }
+.detail-gallery img{ width:108px; height:78px; object-fit:cover; border:1px solid #ccc; border-radius:2px; display:block; }
+.detail-gallery.landscape img{ width:220px; height:130px; }
+.detail-video-slot{ margin-top:14px; width:220px; height:124px; border:1px dashed #aaa; background:#f4f4f4; display:flex; align-items:center; justify-content:center; font-size:10.5px; color:#888; text-align:center; padding:6px; border-radius:2px; }
 
 #taskbar{
   position:absolute; left:0; right:0; bottom:0; height:var(--taskbar-h);
@@ -596,6 +604,26 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">02</div>
+                <h3>Sentiment Classifier</h3>
+                <p>An NLP sentiment classification project built to close skill gaps for AI/ML roles — progressed from a TF-IDF + Logistic Regression baseline to a PyTorch LSTM model, with MLflow experiment tracking and a FastAPI serving layer. Work in progress.</p>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">MLflow</span></div>
+                <a class="src" href="https://github.com/MahnoorAhmed999/sentiment-classifier" target="_blank" rel="noopener">↳ View Source</a>
+              </div>
+              <div class="side"><div class="meta">AI / ML — In Progress<br>2026</div><div class="arrow">↗</div></div>
+            </div>
+            <div class="item-row">
+              <div>
+                <div class="idx">03</div>
+                <h3>Fake Job Posting Hunt</h3>
+                <p>A fraudulent job posting classifier built for the Bright Data x WeMakeDevs hackathon — a Naive Bayes model trained on the EMSCAD dataset, cross-checked against real job listings scraped from Rozee.pk via Bright Data's Scraper Studio. Work in progress.</p>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">Naive Bayes</span><span class="tag">Web Scraping</span></div>
+                <a class="src" href="https://github.com/MahnoorAhmed999/fake-job-hunt" target="_blank" rel="noopener">↳ View Source</a>
+              </div>
+              <div class="side"><div class="meta">AI / ML — In Progress<br>2026</div><div class="arrow">↗</div></div>
+            </div>
+            <div class="item-row">
+              <div>
+                <div class="idx">04</div>
                 <h3>PUBG Data Pipeline QA</h3>
                 <p>Automated test suite for a real data cleaning and transformation pipeline — unit tests covering empty dataframes, missing columns, and invalid/negative values, applying QA methodology to a data engineering workflow.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">pytest</span><span class="tag">unittest</span></div>
@@ -605,7 +633,7 @@ a{ color:var(--link); }
             </div>
             <div class="item-row">
               <div>
-                <div class="idx">03</div>
+                <div class="idx">05</div>
                 <h3>UNO — Adversarial Search AI</h3>
                 <p>A 3-player simplified UNO game with full rule logic. Built a Minimax agent (defensive) and an Expectimax agent (offensive), each with a custom tuned evaluation function, plus manual and full AI-vs-AI simulation modes.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">Minimax</span><span class="tag">Expectimax</span></div>
@@ -615,7 +643,7 @@ a{ color:var(--link); }
             </div>
             <div class="item-row">
               <div>
-                <div class="idx">04</div>
+                <div class="idx">06</div>
                 <h3>Captain Obi — Firefighting Robot</h3>
                 <p>An autonomous indoor firefighting robot on Arduino, integrating flame, smoke, and ultrasonic sensors across search, firefighting, and collision-avoidance modes, with servo and water-pump actuation.</p>
                 <div class="tag-row"><span class="tag">Arduino</span><span class="tag">Sensor Fusion</span><span class="tag">Embedded C</span></div>
@@ -624,25 +652,26 @@ a{ color:var(--link); }
             </div>
             <div class="item-row">
               <div>
-                <div class="idx">05</div>
-                <h3>Movie Data Manager System</h3>
-                <p>A complete movie management system with stacks, queues, linked lists, trees, graphs, and hash tables implemented entirely from scratch — no STL — using BFS/DFS for relationship traversal and recommendations.</p>
-                <div class="tag-row"><span class="tag">C++</span><span class="tag">Data Structures</span><span class="tag">BFS/DFS</span></div>
+                <div class="idx">07</div>
+                <h3>Native Finance Tracker</h3>
+                <p>A React Native personal finance tracker app with a Firebase/Firestore backend for real-time data. Work in progress.</p>
+                <div class="tag-row"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Firestore</span></div>
+                <a class="src" href="https://github.com/MahnoorAhmed999/Native-Finance-Tracker" target="_blank" rel="noopener">↳ View Source</a>
               </div>
-              <div class="side"><div class="meta">Data Structures<br>2025</div><div class="arrow">↗</div></div>
+              <div class="side"><div class="meta">Mobile — In Progress<br>2026</div><div class="arrow">↗</div></div>
             </div>
             <div class="item-row">
               <div>
-                <div class="idx">06</div>
+                <div class="idx">08</div>
                 <h3>EcoClean</h3>
-                <p>A full-stack website, designed, built, and deployed end to end.</p>
+                <p>A full-stack platform connecting trash pickers, homeowners, and business/government-level stakeholders to fix the gap between Pakistan's waste-collection systems and clean streets. Frontend, backend, and hosting all built end to end. Originally deployed on Vercel and Railway; currently being redeployed via GitHub for more reliable hosting.</p>
                 <div class="tag-row"><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">Deployed</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/EcoClean" target="_blank" rel="noopener">↳ View Source</a>
               </div>
               <div class="side"><div class="meta">Full-Stack Web<br>2025</div><div class="arrow">↗</div></div>
             </div>
           </div>
-          <p class="hint">More projects — including the AI Intelligent Checkers Board, Rush Hour Game (C++ and Assembly), and Bubble Shooter — are in the "Projects" folder on the desktop, or on <a href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">github.com/MahnoorAhmed999</a>.</p>
+          <p class="hint">More projects — including the AI Intelligent Checkers Board — are in the "Projects" folder on the desktop, or on <a href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">github.com/MahnoorAhmed999</a>.</p>
         </section>
 
         <section id="skills-anchor" class="grid-bg-cream">
@@ -862,18 +891,17 @@ a{ color:var(--link); }
     <div class="window-body folder-body">
       <div class="folder-grid">
         <div class="file-icon" tabindex="0" data-open="proj-detail-1"><div class="glyph">📄</div><span>Tarbella Guardian</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-2"><div class="glyph">📄</div><span>PUBG Pipeline QA</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-3"><div class="glyph">📄</div><span>UNO AI</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-4"><div class="glyph">📄</div><span>Captain Obi</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-5"><div class="glyph">📄</div><span>Movie Data Manager</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-6"><div class="glyph">📄</div><span>EcoClean</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-7"><div class="glyph">📄</div><span>AI Checkers Board</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-8"><div class="glyph">📄</div><span>Rush Hour (C++ &amp; ASM)</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-9"><div class="glyph">📄</div><span>Bubble Shooter</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-10"><div class="glyph">📄</div><span>Web Scraping &amp; Regression</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-2"><div class="glyph">📄</div><span>Sentiment Classifier</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-3"><div class="glyph">📄</div><span>Fake Job Posting Hunt</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-4"><div class="glyph">📄</div><span>PUBG Pipeline QA</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-5"><div class="glyph">📄</div><span>UNO AI</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-6"><div class="glyph">📄</div><span>Captain Obi</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-7"><div class="glyph">📄</div><span>Native Finance Tracker</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-8"><div class="glyph">📄</div><span>EcoClean</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-9"><div class="glyph">📄</div><span>AI Checkers Board</span></div>
       </div>
     </div>
-    <div class="status-bar win98-sunken">10 object(s)</div>
+    <div class="status-bar win98-sunken">9 object(s)</div>
   </div>
 
   <div class="window win98-raised" id="win-certificates" data-title="Certificates" style="width:380px;height:300px;left:200px;top:130px;">
@@ -955,7 +983,7 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-1" data-title="Tarbella Guardian" style="width:440px;height:360px;left:180px;top:120px;">
+  <div class="window win98-raised" id="win-proj-detail-1" data-title="Tarbella Guardian" style="width:460px;height:460px;left:180px;top:120px;">
     <div class="title-bar"><div class="title-bar-text">📄 Tarbella Guardian</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-1')">✕</button></div>
     </div>
@@ -963,13 +991,48 @@ a{ color:var(--link); }
       <h2>Tarbella Guardian</h2>
       <div class="meta">Unity · Digital Twin · IoT · Hardware &amp; Software</div>
       <p>An AI-powered predictive digital twin for dam health monitoring, built during a 10-day Erasmus+ summer bootcamp at GIKI, Topi. Combined IoT sensor hardware with a Unity 3D visualization layer. Won Best Project at the bootcamp.</p>
-      <div class="links"><a href="#">Certificate: Best Project – GIKI (2026)</a></div>
+      <div class="links">
+        <a href="#" onclick="openWindow('cert-detail-2');return false;">Certificate: Best Project – GIKI (2026)</a>
+        <a href="https://lnkd.in/p/dgPgHpzv" target="_blank" rel="noopener">View project post on LinkedIn ↗</a>
+      </div>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: tarbella-1.jpg</div>
+        <div class="img-slot">Photo: tarbella-2.jpg</div>
+        <div class="img-slot">Photo: tarbella-3.jpg</div>
+      </div>
+      <div class="detail-video-slot">Demo video: tarbella-demo.mp4</div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-2" data-title="PUBG Data Pipeline QA" style="width:440px;height:360px;left:210px;top:150px;">
-    <div class="title-bar"><div class="title-bar-text">📄 PUBG Data Pipeline QA</div>
+  <div class="window win98-raised" id="win-proj-detail-2" data-title="Sentiment Classifier" style="width:440px;height:360px;left:200px;top:135px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Sentiment Classifier</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-2')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-2')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-2')">✕</button></div>
+    </div>
+    <div class="window-body detail-body">
+      <span class="status-pill">Work in Progress</span>
+      <h2>Sentiment Classifier</h2>
+      <div class="meta">Python · PyTorch · FastAPI · MLflow</div>
+      <p>A sentiment classification project built to close skill gaps for AI/ML roles. Started with a TF-IDF + Logistic Regression baseline, then progressed to a PyTorch LSTM model using packed padded sequences for variable-length text. Tracked experiments with MLflow and built a FastAPI layer to serve predictions.</p>
+      <div class="links"><a href="https://github.com/MahnoorAhmed999/sentiment-classifier" target="_blank" rel="noopener">Source code</a></div>
+    </div>
+  </div>
+
+  <div class="window win98-raised" id="win-proj-detail-3" data-title="Fake Job Posting Hunt" style="width:440px;height:380px;left:220px;top:150px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Fake Job Posting Hunt</div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-3')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-3')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-3')">✕</button></div>
+    </div>
+    <div class="window-body detail-body">
+      <span class="status-pill">Work in Progress</span>
+      <h2>Fake Job Posting Hunt</h2>
+      <div class="meta">Python · Naive Bayes · Web Scraping</div>
+      <p>Primary submission for the Bright Data x WeMakeDevs hackathon — a fraudulent job posting classifier. Trained a Naive Bayes model on the EMSCAD dataset, then checked it against real job listings scraped from Rozee.pk using Bright Data's Scraper Studio to flag likely-fraudulent postings.</p>
+      <div class="links"><a href="https://github.com/MahnoorAhmed999/fake-job-hunt" target="_blank" rel="noopener">Source code</a></div>
+    </div>
+  </div>
+
+  <div class="window win98-raised" id="win-proj-detail-4" data-title="PUBG Data Pipeline QA" style="width:440px;height:360px;left:210px;top:150px;">
+    <div class="title-bar"><div class="title-bar-text">📄 PUBG Data Pipeline QA</div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-4')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-4')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-4')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <h2>PUBG Data Pipeline — Automated Test Suite</h2>
@@ -979,9 +1042,9 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-3" data-title="UNO Adversarial AI" style="width:440px;height:360px;left:240px;top:180px;">
+  <div class="window win98-raised" id="win-proj-detail-5" data-title="UNO Adversarial AI" style="width:440px;height:360px;left:240px;top:180px;">
     <div class="title-bar"><div class="title-bar-text">📄 UNO Adversarial AI</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-3')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-3')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-3')">✕</button></div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-5')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-5')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-5')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <h2>UNO — Adversarial Search AI</h2>
@@ -991,85 +1054,89 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-4" data-title="Captain Obi" style="width:440px;height:360px;left:260px;top:130px;">
+  <div class="window win98-raised" id="win-proj-detail-6" data-title="Captain Obi" style="width:460px;height:440px;left:260px;top:130px;">
     <div class="title-bar"><div class="title-bar-text">📄 Captain Obi</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-4')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-4')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-4')">✕</button></div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-6')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-6')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-6')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <h2>Captain Obi — Firefighting Robot</h2>
       <div class="meta">Arduino · Sensor Fusion · Embedded Systems</div>
       <p>Designed and built an autonomous indoor firefighting robot integrating flame, smoke, and ultrasonic sensors for real-time detection. Implemented three operating modes — Search, Fire Fighting (direction locking, navigation, water pump activation), and Fire Avoidance (distance-based rerouting) — controlling servo motors and a water pump.</p>
+      <p><b>Materials used:</b></p>
+      <ul class="materials-list">
+        <li>Arduino Uno (microcontroller)</li>
+        <li>Flame sensor</li>
+        <li>Smoke/gas sensor</li>
+        <li>Ultrasonic distance sensor</li>
+        <li>Servo motor(s) for directional aiming</li>
+        <li>Mini water pump + tubing</li>
+        <li>Motor driver + chassis with wheels</li>
+        <li>Breadboard, jumper wires, external power supply</li>
+      </ul>
+      <p style="font-size:11.5px;color:#999;">↳ Double-check this list against your actual build and adjust as needed.</p>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: captain-obi-1.jpg</div>
+        <div class="img-slot">Photo: captain-obi-2.jpg</div>
+        <div class="img-slot">Photo: captain-obi-3.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-5" data-title="Movie Data Manager" style="width:440px;height:360px;left:290px;top:160px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Movie Data Manager</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-5')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-5')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-5')">✕</button></div>
+  <div class="window win98-raised" id="win-proj-detail-7" data-title="Native Finance Tracker" style="width:440px;height:380px;left:290px;top:160px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Native Finance Tracker</div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-7')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-7')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-7')">✕</button></div>
     </div>
     <div class="window-body detail-body">
-      <h2>Movie Data Manager System</h2>
-      <div class="meta">C++ · Data Structures</div>
-      <p>A complete movie management system built on core data structures — stacks, queues, linked lists, trees, graphs, and hash tables — implemented entirely from scratch with no STL. Applied BFS and DFS for relationship traversal and recommendations.</p>
+      <span class="status-pill">Work in Progress</span>
+      <h2>Native Finance Tracker</h2>
+      <div class="meta">React Native · Firebase · Firestore</div>
+      <p>A green-themed personal finance tracker app built with React Native, backed by Firebase and Firestore for real-time data sync across sessions.</p>
+      <div class="links"><a href="https://github.com/MahnoorAhmed999/Native-Finance-Tracker" target="_blank" rel="noopener">Source code</a></div>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: finance-tracker-1.jpg</div>
+        <div class="img-slot">Photo: finance-tracker-2.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-6" data-title="EcoClean" style="width:440px;height:340px;left:320px;top:190px;">
+  <div class="window win98-raised" id="win-proj-detail-8" data-title="EcoClean" style="width:460px;height:460px;left:320px;top:190px;">
     <div class="title-bar"><div class="title-bar-text">📄 EcoClean</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-6')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-6')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-6')">✕</button></div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-8')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-8')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-8')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <h2>EcoClean</h2>
       <div class="meta">Frontend · Backend · Deployed</div>
-      <p>A full-stack website — designed, built, and deployed end to end.</p>
+      <p>Pakistan has trash pickers in almost every city, yet litter and overflowing bins are still everywhere — the collection system exists but doesn't actually work. EcoClean is a full-stack platform designed to fix that by directly connecting the three sides of the problem: trash pickers, homeowners who need the service, and business/government-level stakeholders who could scale it.</p>
+      <p><b>How it works:</b></p>
+      <ul class="materials-list">
+        <li>Trash pickers are assigned duties with fixed time ranges/routes to pick up from</li>
+        <li>Homeowners can rate and review pickup service</li>
+        <li>A global complaint system flags failures in the process</li>
+        <li>Collected trash routes onward to recycling companies or other downstream partners</li>
+        <li>Gives trash pickers a defined role, job security, and a better, trackable workflow</li>
+        <li>Designed as a generalized (gen-1) system usable by everyone in the chain</li>
+      </ul>
+      <p>Originally hosted on Vercel (frontend) and Railway (backend); currently being redeployed via GitHub after reliability issues with that hosting setup.</p>
       <div class="links"><a href="https://github.com/MahnoorAhmed999/EcoClean" target="_blank" rel="noopener">Source code</a></div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-7" data-title="AI Checkers Board" style="width:440px;height:320px;left:200px;top:200px;">
+  <div class="window win98-raised" id="win-proj-detail-9" data-title="AI Checkers Board" style="width:440px;height:400px;left:200px;top:200px;">
     <div class="title-bar"><div class="title-bar-text">📄 AI Checkers Board</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-7')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-7')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-7')">✕</button></div>
+      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-9')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-9')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-9')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <h2>AI Intelligent Checkers Board</h2>
       <div class="meta">Hardware · AI · Arduino</div>
       <p>Designed and built an AI-driven physical checkers board integrating hardware sensors with checkers game logic, combining embedded systems programming with adversarial search algorithms.</p>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: ai-checkers-1.jpg</div>
+        <div class="img-slot">Photo: ai-checkers-2.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-8" data-title="Rush Hour" style="width:440px;height:340px;left:230px;top:220px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Rush Hour (C++ &amp; ASM)</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-8')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-8')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-8')">✕</button></div>
-    </div>
-    <div class="window-body detail-body">
-      <h2>Rush Hour Game — C++ &amp; Assembly</h2>
-      <div class="meta">C++ (OOP) · Assembly (MASM)</div>
-      <p>An interactive grid-based game built twice: first in C++ using encapsulation, inheritance, polymorphism, and abstraction, with vehicle selection, randomized obstacles, and score calculation; then rebuilt entirely in Assembly (MASM), handling low-level logic, graphics, and memory/register management by hand.</p>
-    </div>
-  </div>
-
-  <div class="window win98-raised" id="win-proj-detail-9" data-title="Bubble Shooter" style="width:420px;height:300px;left:260px;top:240px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Bubble Shooter</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-9')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-9')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-9')">✕</button></div>
-    </div>
-    <div class="window-body detail-body">
-      <h2>Bubble Shooter Game</h2>
-      <div class="meta">C++</div>
-      <p>A complete Bubble Shooter game built from scratch — bubble movement, collision detection, matching logic, and popping mechanics — using functions, custom header files, arrays, loops, and control structures with no external libraries.</p>
-    </div>
-  </div>
-
-  <div class="window win98-raised" id="win-proj-detail-10" data-title="Web Scraping & Regression" style="width:440px;height:340px;left:290px;top:260px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Web Scraping &amp; Regression</div>
-      <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-10')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-10')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-10')">✕</button></div>
-    </div>
-    <div class="window-body detail-body">
-      <h2>Web Scraping, Feature Engineering &amp; Regression Analysis</h2>
-      <div class="meta">Python · Pandas · NumPy</div>
-      <p>Extracted structured datasets from online sources via Python web scraping, cleaned and transformed the raw data, performed feature engineering and selection, and built and analyzed regression models — visualizing trends and results to draw data-driven conclusions.</p>
-    </div>
-  </div>
-
-  <div class="window win98-raised" id="win-cert-detail-1" data-title="Bug Catcher" style="width:380px;height:260px;left:260px;top:140px;">
+  <div class="window win98-raised" id="win-cert-detail-1" data-title="Bug Catcher" style="width:380px;height:340px;left:260px;top:140px;">
     <div class="title-bar"><div class="title-bar-text">📜 Bug Catcher.pdf</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('cert-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('cert-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('cert-detail-1')">✕</button></div>
     </div>
@@ -1077,10 +1144,13 @@ a{ color:var(--link); }
       <h2>Bug Catcher Event</h2>
       <div class="meta">FAST-NUCES · 2025</div>
       <p>University-level debugging competition (C++ / Python).</p>
+      <div class="detail-gallery landscape">
+        <div class="img-slot landscape">Certificate: bug-catcher.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-cert-detail-2" data-title="Best Project - GIKI" style="width:380px;height:260px;left:300px;top:170px;">
+  <div class="window win98-raised" id="win-cert-detail-2" data-title="Best Project - GIKI" style="width:380px;height:340px;left:300px;top:170px;">
     <div class="title-bar"><div class="title-bar-text">📜 Best Project - GIKI.pdf</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('cert-detail-2')">_</button><button class="title-btn" onclick="toggleMaximize('cert-detail-2')">▢</button><button class="title-btn" onclick="closeWindow('cert-detail-2')">✕</button></div>
     </div>
@@ -1088,10 +1158,13 @@ a{ color:var(--link); }
       <h2>Best Project — GIKI</h2>
       <div class="meta">GIKI Erasmus+ Summer Bootcamp · 2026</div>
       <p>Awarded for "Tarbella Guardian" — a Unity-based digital twin model.</p>
+      <div class="detail-gallery landscape">
+        <div class="img-slot landscape">Certificate: giki-cert.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-exp-detail-1" data-title="STEM Instructor" style="width:420px;height:300px;left:300px;top:150px;">
+  <div class="window win98-raised" id="win-exp-detail-1" data-title="STEM Instructor" style="width:420px;height:360px;left:300px;top:150px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ STEM Instructor</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-1')">✕</button></div>
     </div>
@@ -1102,10 +1175,14 @@ a{ color:var(--link); }
         <li>Tutored students in Python, JavaScript, and Scratch coding.</li>
         <li>Assisted students with numerical problem-solving, formula application, and concept clarification.</li>
       </ul>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: stem-instructor-1.jpg</div>
+        <div class="img-slot">Photo: stem-instructor-2.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-exp-detail-2" data-title="Mobile App Dev Intern" style="width:420px;height:300px;left:330px;top:170px;">
+  <div class="window win98-raised" id="win-exp-detail-2" data-title="Mobile App Dev Intern" style="width:420px;height:400px;left:330px;top:170px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ Mobile App Dev Intern</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-2')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-2')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-2')">✕</button></div>
     </div>
@@ -1116,10 +1193,16 @@ a{ color:var(--link); }
         <li>Created and deployed an app — frontend and backend.</li>
         <li>Worked on React Native and Android app development.</li>
       </ul>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: mobile-dev-1.jpg</div>
+        <div class="img-slot">Photo: mobile-dev-2.jpg</div>
+        <div class="img-slot">Photo: mobile-dev-3.jpg</div>
+        <div class="img-slot">Photo: mobile-dev-4.jpg</div>
+      </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-exp-detail-3" data-title="Python Dev Intern" style="width:420px;height:300px;left:250px;top:190px;">
+  <div class="window win98-raised" id="win-exp-detail-3" data-title="Python Dev Intern" style="width:420px;height:360px;left:250px;top:190px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ Python Dev Intern</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-3')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-3')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-3')">✕</button></div>
     </div>
@@ -1131,6 +1214,9 @@ a{ color:var(--link); }
         <li>Worked with APIs, backend logic, and database-connected workflows.</li>
         <li>Built and deployed a frontend proof-of-concept on Vercel for system demonstration.</li>
       </ul>
+      <div class="detail-gallery landscape">
+        <div class="img-slot landscape">Certificate: python-dev-cert.jpg</div>
+      </div>
     </div>
   </div>
 
@@ -1148,7 +1234,7 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-exp-detail-5" data-title="Easypaisa Ambassador" style="width:420px;height:280px;left:310px;top:230px;">
+  <div class="window win98-raised" id="win-exp-detail-5" data-title="Easypaisa Ambassador" style="width:420px;height:340px;left:310px;top:230px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ Easypaisa Ambassador</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-5')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-5')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-5')">✕</button></div>
     </div>
@@ -1159,6 +1245,9 @@ a{ color:var(--link); }
         <li>Drove app downloads among students.</li>
         <li>Arranged and managed campus events.</li>
       </ul>
+      <div class="detail-gallery landscape">
+        <div class="img-slot landscape">Certificate: easypaisa-cert.jpg</div>
+      </div>
     </div>
   </div>
 
@@ -1185,12 +1274,15 @@ a{ color:var(--link); }
       <h2>Front Desk Officer</h2>
       <div class="meta">FAST-NUCES, Islamabad · Jun 2026 – Aug 2026</div>
       <ul style="font-size:13.5px;color:#333;padding-left:18px;">
-        <li>Handled admissions, mail, and documentation.</li>
+        <li>Took part in admissions management and handled mail and documentation.</li>
+        <li>Invigilated the entry test and managed students before and after the exam.</li>
+        <li>Guided students and visitors through admissions procedures at the front desk.</li>
+        <li>Handled high email volume and phone calls, providing information and support to inquirers.</li>
       </ul>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-exp-detail-8" data-title="Sundas Volunteer" style="width:400px;height:280px;left:300px;top:290px;">
+  <div class="window win98-raised" id="win-exp-detail-8" data-title="Sundas Volunteer" style="width:400px;height:380px;left:300px;top:290px;">
     <div class="title-bar"><div class="title-bar-text">🗂️ Sundas Volunteer</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('exp-detail-8')">_</button><button class="title-btn" onclick="toggleMaximize('exp-detail-8')">▢</button><button class="title-btn" onclick="closeWindow('exp-detail-8')">✕</button></div>
     </div>
@@ -1201,6 +1293,12 @@ a{ color:var(--link); }
         <li>Conducted digital literacy sessions (MS Office training).</li>
         <li>Assisted with data organization and community outreach tasks.</li>
       </ul>
+      <div class="detail-gallery">
+        <div class="img-slot">Photo: sundas-1.jpg</div>
+        <div class="img-slot">Photo: sundas-2.jpg</div>
+        <div class="img-slot">Photo: sundas-3.jpg</div>
+        <div class="img-slot">Photo: sundas-4.jpg</div>
+      </div>
     </div>
   </div>
 
