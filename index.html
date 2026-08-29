@@ -412,34 +412,36 @@ a{ color:var(--link); }
 .detail-body .links{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; }
 .detail-body .status-pill{ display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:999px; background:#fff4d6; color:#8a6100; border:1px solid #e8c968; margin-bottom:8px; }
 .materials-list{ font-size:13.5px; color:#333; padding-left:18px; margin:8px 0 0; line-height:1.6; }
-.detail-gallery{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:16px; width:100%; }
+.detail-gallery{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:flex-start;
+  gap:14px;
+  margin:16px 0 0;
+  width:100%;
+}
 .detail-gallery img{
-  border-radius:8px; border:1px solid #ddd; cursor:zoom-in; display:block;
-  box-shadow:0 1px 4px rgba(0,0,0,.15);
+  flex:1 1 260px; min-width:200px; max-width:420px;
+  width:auto; aspect-ratio: 4 / 3; object-fit:cover;
+  border-radius:14px; border:1px solid #ddd; cursor:zoom-in; display:block;
+  box-shadow:0 2px 10px rgba(0,0,0,.15);
   transition:transform .18s ease, box-shadow .18s ease;
 }
-.detail-gallery img:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 8px 18px rgba(0,0,0,.25); }
-.detail-gallery img.gallery-hero{
-  width:min(100%, 340px); height:200px; object-fit:cover;
-  box-shadow:0 4px 16px rgba(0,0,0,.2);
+.detail-gallery img:hover{ transform:translateY(-3px) scale(1.03); box-shadow:0 10px 24px rgba(0,0,0,.28); }
+.detail-gallery.landscape img{ aspect-ratio: 16 / 9; flex-basis:320px; max-width:520px; }
+.detail-gallery img.cert-img{ object-fit:contain; background:#fff; padding:10px; }
+.detail-gallery .img-slot{
+  flex:1 1 260px; min-width:200px; max-width:420px;
+  aspect-ratio:4/3; border:1px dashed #aaa; background:#f4f4f4;
+  display:flex; align-items:center; justify-content:center; font-size:9.5px; color:#888;
+  text-align:center; padding:4px; border-radius:14px; line-height:1.3;
 }
-.detail-gallery img.gallery-hero:hover{ transform:translateY(-2px) scale(1.015); box-shadow:0 10px 26px rgba(0,0,0,.3); }
-.detail-gallery.landscape img.gallery-hero, .detail-gallery img.cert-img.gallery-hero{ width:min(100%, 280px); height:165px; }
-.gallery-thumbs{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap:10px;
-  width:100%; max-width:380px;
-  justify-items:stretch;
-}
-.gallery-thumbs img{ width:100%; height:110px; object-fit:cover; }
-.detail-gallery .img-slot{ width:108px; height:78px; border:1px dashed #aaa; background:#f4f4f4; display:flex; align-items:center; justify-content:center; font-size:9.5px; color:#888; text-align:center; padding:4px; border-radius:2px; line-height:1.3; }
-.detail-gallery .img-slot.landscape{ width:220px; height:130px; }
+.detail-gallery.landscape .img-slot{ aspect-ratio:16/9; flex-basis:320px; max-width:520px; }
 .detail-video-slot{ margin:14px auto 0; display:block; width:100%; max-width:340px; height:auto; aspect-ratio:16/9; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,.2); }
 @media (max-width:480px){
-  .detail-gallery img.gallery-hero{ height:150px; }
-  .detail-gallery.landscape img.gallery-hero, .detail-gallery img.cert-img.gallery-hero{ height:110px; }
-  .gallery-thumbs img{ height:90px; }
+  .detail-gallery{ gap:8px; }
+  .detail-gallery img, .detail-gallery .img-slot{ flex-basis:140px; min-width:140px; }
 }
 
 /* ---- Lightbox ---- */
@@ -1765,21 +1767,6 @@ a{ color:var(--link); }
         : '<span class="exp-tool-fallback" style="display:flex;">' + t.emoji + '</span>';
       return '<div class="exp-tool"><span class="exp-tool-icon">' + iconHtml + '</span><span class="exp-tool-name">' + t.name + '</span></div>';
     }).join('');
-  });
-})();
-
-/* ---- Give each gallery a centered hero photo + thumbnail row below ---- */
-(function(){
-  document.querySelectorAll('.detail-gallery').forEach(function(g){
-    var imgs = Array.prototype.slice.call(g.children).filter(function(el){ return el.tagName === 'IMG'; });
-    if(!imgs.length) return;
-    imgs[0].classList.add('gallery-hero');
-    if(imgs.length > 1){
-      var thumbs = document.createElement('div');
-      thumbs.className = 'gallery-thumbs';
-      imgs.slice(1).forEach(function(im){ thumbs.appendChild(im); });
-      g.appendChild(thumbs);
-    }
   });
 })();
 
