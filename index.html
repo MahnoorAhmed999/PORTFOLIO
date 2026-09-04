@@ -430,6 +430,7 @@ a{ color:var(--link); }
 }
 .detail-gallery img:hover{ transform:translateY(-3px) scale(1.03); box-shadow:0 10px 24px rgba(0,0,0,.28); }
 .detail-gallery.landscape img{ aspect-ratio: 16 / 9; flex-basis:320px; max-width:520px; }
+.detail-gallery.portrait img{ aspect-ratio:9/19; object-fit:contain; background:#f2f2f2; flex-basis:170px; max-width:210px; }
 .detail-gallery img.cert-img{ object-fit:contain; background:#fff; padding:10px; }
 .detail-gallery .img-slot{
   flex:1 1 260px; min-width:200px; max-width:420px;
@@ -439,6 +440,11 @@ a{ color:var(--link); }
 }
 .detail-gallery.landscape .img-slot{ aspect-ratio:16/9; flex-basis:320px; max-width:520px; }
 .detail-video-slot{ margin:14px auto 0; display:block; width:100%; max-width:340px; height:auto; aspect-ratio:16/9; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,.2); }
+.gallery-heading{
+  text-align:left; font-family:var(--font-display); font-size:15px; text-transform:uppercase;
+  letter-spacing:.03em; color:var(--pg-ink,#161616); margin:20px 0 12px;
+  padding:6px 0 6px 14px; border-left:4px solid var(--pg-pink,#ec1a6f);
+}
 @media (max-width:480px){
   .detail-gallery{ gap:8px; }
   .detail-gallery img, .detail-gallery .img-slot{ flex-basis:140px; min-width:140px; }
@@ -670,7 +676,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">01</div>
-                <h3>Tarbella Guardian</h3>
+                <h3>Tarbella Guardian [Unity Project]</h3>
                 <p>An AI-powered predictive digital twin for dam health monitoring, combining hardware/IoT sensors, software, and a Unity 3D visualization. Built at a GIKI Erasmus+ summer bootcamp — won Best Project.</p>
                 <div class="tag-row"><span class="tag">Unity</span><span class="tag">Digital Twin</span><span class="tag">IoT</span></div>
               </div>
@@ -679,7 +685,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">02</div>
-                <h3>Sentiment Classifier</h3>
+                <h3>Sentiment Classifier ML</h3>
                 <p>An NLP sentiment classification project built to close skill gaps for AI/ML roles — progressed from a TF-IDF + Logistic Regression baseline to a PyTorch LSTM model, with MLflow experiment tracking and a FastAPI serving layer. Work in progress.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">MLflow</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/sentiment-classifier" target="_blank" rel="noopener">↳ View Source</a>
@@ -689,7 +695,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">03</div>
-                <h3>Fake Job Posting Hunt</h3>
+                <h3>Fake Job Posting Hunt ML</h3>
                 <p>A fraudulent job posting classifier built for the Bright Data x WeMakeDevs hackathon — a Naive Bayes model trained on the EMSCAD dataset, cross-checked against real job listings scraped from Rozee.pk via Bright Data's Scraper Studio. Work in progress.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">Naive Bayes</span><span class="tag">Web Scraping</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/fake-job-hunt" target="_blank" rel="noopener">↳ View Source</a>
@@ -699,7 +705,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">04</div>
-                <h3>PUBG Data Pipeline QA</h3>
+                <h3>PUBG Pipeline QA Tester</h3>
                 <p>Automated test suite for a real data cleaning and transformation pipeline — unit tests covering empty dataframes, missing columns, and invalid/negative values, applying QA methodology to a data engineering workflow.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">pytest</span><span class="tag">unittest</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/PUBG-data-PIPELINE-QA" target="_blank" rel="noopener">↳ View Source</a>
@@ -709,7 +715,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">05</div>
-                <h3>UNO — Adversarial Search AI</h3>
+                <h3>UNO AI</h3>
                 <p>A 3-player simplified UNO game with full rule logic. Built a Minimax agent (defensive) and an Expectimax agent (offensive), each with a custom tuned evaluation function, plus manual and full AI-vs-AI simulation modes.</p>
                 <div class="tag-row"><span class="tag">Python</span><span class="tag">Minimax</span><span class="tag">Expectimax</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/Ai-UNO-" target="_blank" rel="noopener">↳ View Source</a>
@@ -719,7 +725,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">06</div>
-                <h3>Captain Obi — Firefighting Robot</h3>
+                <h3>Captain Obi [Robo-Car]</h3>
                 <p>An autonomous indoor firefighting robot on Arduino, integrating flame, smoke, and ultrasonic sensors across search, firefighting, and collision-avoidance modes, with servo and water-pump actuation.</p>
                 <div class="tag-row"><span class="tag">Arduino</span><span class="tag">Sensor Fusion</span><span class="tag">Embedded C</span></div>
               </div>
@@ -728,7 +734,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">07</div>
-                <h3>Native Finance Tracker</h3>
+                <h3>Finance Tracker App</h3>
                 <p>A React Native personal finance tracker app with a Firebase/Firestore backend for real-time data. Work in progress.</p>
                 <div class="tag-row"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Firestore</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/Native-Finance-Tracker" target="_blank" rel="noopener">↳ View Source</a>
@@ -738,7 +744,7 @@ a{ color:var(--link); }
             <div class="item-row">
               <div>
                 <div class="idx">08</div>
-                <h3>EcoClean</h3>
+                <h3>EcoClean Website</h3>
                 <p>A full-stack platform connecting trash pickers, homeowners, and business/government-level stakeholders to fix the gap between Pakistan's waste-collection systems and clean streets. Frontend, backend, and hosting all built end to end. Originally deployed on Vercel and Railway; currently being redeployed via GitHub for more reliable hosting.</p>
                 <div class="tag-row"><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">Deployed</span></div>
                 <a class="src" href="https://github.com/MahnoorAhmed999/EcoClean" target="_blank" rel="noopener">↳ View Source</a>
@@ -746,7 +752,7 @@ a{ color:var(--link); }
               <div class="side"><div class="meta">Full-Stack Web<br>2025</div><div class="arrow">↗</div></div>
             </div>
           </div>
-          <p class="hint">More projects — including the AI Intelligent Checkers Board — are in the "Projects" folder on the desktop, or on <a href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">github.com/MahnoorAhmed999</a>.</p>
+          <p class="hint">More projects — including the AI Checkers Board [Hardware] — are in the "Projects" folder on the desktop, or on <a href="https://github.com/MahnoorAhmed999" target="_blank" rel="noopener">github.com/MahnoorAhmed999</a>.</p>
         </section>
 
         <section id="skills-anchor" class="grid-bg-cream">
@@ -965,15 +971,15 @@ a{ color:var(--link); }
     </div>
     <div class="window-body folder-body">
       <div class="folder-grid">
-        <div class="file-icon" tabindex="0" data-open="proj-detail-1"><div class="glyph">📄</div><span>Tarbella Guardian</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-2"><div class="glyph">📄</div><span>Sentiment Classifier</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-3"><div class="glyph">📄</div><span>Fake Job Posting Hunt</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-4"><div class="glyph">📄</div><span>PUBG Pipeline QA</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-1"><div class="glyph">📄</div><span>Tarbella Guardian [Unity Project]</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-2"><div class="glyph">📄</div><span>Sentiment Classifier ML</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-3"><div class="glyph">📄</div><span>Fake Job Posting Hunt ML</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-4"><div class="glyph">📄</div><span>PUBG Pipeline QA Tester</span></div>
         <div class="file-icon" tabindex="0" data-open="proj-detail-5"><div class="glyph">📄</div><span>UNO AI</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-6"><div class="glyph">📄</div><span>Captain Obi</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-7"><div class="glyph">📄</div><span>Native Finance Tracker</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-8"><div class="glyph">📄</div><span>EcoClean</span></div>
-        <div class="file-icon" tabindex="0" data-open="proj-detail-9"><div class="glyph">📄</div><span>AI Checkers Board</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-6"><div class="glyph">📄</div><span>Captain Obi [Robo-Car]</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-7"><div class="glyph">📄</div><span>Finance Tracker App</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-8"><div class="glyph">📄</div><span>EcoClean Website</span></div>
+        <div class="file-icon" tabindex="0" data-open="proj-detail-9"><div class="glyph">📄</div><span>AI Checkers Board [Hardware]</span></div>
       </div>
     </div>
     <div class="status-bar win98-sunken">9 object(s)</div>
@@ -1057,12 +1063,12 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-1" data-title="Tarbella Guardian" style="width:460px;height:460px;left:180px;top:120px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Tarbella Guardian</div>
+  <div class="window win98-raised" id="win-proj-detail-1" data-title="Tarbella Guardian [Unity Project]" style="width:460px;height:460px;left:180px;top:120px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Tarbella Guardian [Unity Project]</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-1')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-1')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-1')">✕</button></div>
     </div>
     <div class="window-body detail-body">
-      <h2>Tarbella Guardian</h2>
+      <h2>Tarbella Guardian [Unity Project]</h2>
       <div class="meta">Unity · Digital Twin · IoT · Hardware &amp; Software</div>
       <p>An AI-powered predictive digital twin for dam health monitoring, built during a 10-day Erasmus+ summer bootcamp at GIKI, Topi. Combined IoT sensor hardware with a Unity 3D visualization layer. Won Best Project at the bootcamp.</p>
       <div class="links">
@@ -1077,34 +1083,34 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-2" data-title="Sentiment Classifier" style="width:440px;height:360px;left:200px;top:135px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Sentiment Classifier</div>
+  <div class="window win98-raised" id="win-proj-detail-2" data-title="Sentiment Classifier ML" style="width:440px;height:360px;left:200px;top:135px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Sentiment Classifier ML</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-2')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-2')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-2')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <span class="status-pill">Work in Progress</span>
-      <h2>Sentiment Classifier</h2>
+      <h2>Sentiment Classifier ML</h2>
       <div class="meta">Python · PyTorch · FastAPI · MLflow</div>
       <p>A sentiment classification project built to close skill gaps for AI/ML roles. Started with a TF-IDF + Logistic Regression baseline, then progressed to a PyTorch LSTM model using packed padded sequences for variable-length text. Tracked experiments with MLflow and built a FastAPI layer to serve predictions.</p>
       <div class="links"><a href="https://github.com/MahnoorAhmed999/sentiment-classifier" target="_blank" rel="noopener">Source code</a></div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-3" data-title="Fake Job Posting Hunt" style="width:440px;height:380px;left:220px;top:150px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Fake Job Posting Hunt</div>
+  <div class="window win98-raised" id="win-proj-detail-3" data-title="Fake Job Posting Hunt ML" style="width:440px;height:380px;left:220px;top:150px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Fake Job Posting Hunt ML</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-3')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-3')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-3')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <span class="status-pill">Work in Progress</span>
-      <h2>Fake Job Posting Hunt</h2>
+      <h2>Fake Job Posting Hunt ML</h2>
       <div class="meta">Python · Naive Bayes · Web Scraping</div>
       <p>Primary submission for the Bright Data x WeMakeDevs hackathon — a fraudulent job posting classifier. Trained a Naive Bayes model on the EMSCAD dataset, then checked it against real job listings scraped from Rozee.pk using Bright Data's Scraper Studio to flag likely-fraudulent postings.</p>
       <div class="links"><a href="https://github.com/MahnoorAhmed999/fake-job-hunt" target="_blank" rel="noopener">Source code</a></div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-4" data-title="PUBG Data Pipeline QA" style="width:440px;height:360px;left:210px;top:150px;">
-    <div class="title-bar"><div class="title-bar-text">📄 PUBG Data Pipeline QA</div>
+  <div class="window win98-raised" id="win-proj-detail-4" data-title="PUBG Pipeline QA Tester" style="width:440px;height:360px;left:210px;top:150px;">
+    <div class="title-bar"><div class="title-bar-text">📄 PUBG Pipeline QA Tester</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-4')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-4')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-4')">✕</button></div>
     </div>
     <div class="window-body detail-body">
@@ -1127,12 +1133,12 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-6" data-title="Captain Obi" style="width:480px;height:640px;left:260px;top:100px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Captain Obi</div>
+  <div class="window win98-raised" id="win-proj-detail-6" data-title="Captain Obi [Robo-Car]" style="width:480px;height:640px;left:260px;top:100px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Captain Obi [Robo-Car]</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-6')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-6')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-6')">✕</button></div>
     </div>
     <div class="window-body detail-body">
-      <h2>Captain Obi — Firefighting Robot</h2>
+      <h2>Captain Obi [Robo-Car]</h2>
       <div class="meta">Arduino · Sensor Fusion · Embedded Systems</div>
       <p>Designed and built an autonomous indoor firefighting robot integrating flame, smoke, and ultrasonic sensors for real-time detection. Implemented three operating modes — Search, Fire Fighting (direction locking, navigation, water pump activation), and Fire Avoidance (distance-based rerouting) — controlling servo motors and a water pump.</p>
       <p><b>Materials used:</b></p>
@@ -1160,29 +1166,33 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-7" data-title="Native Finance Tracker" style="width:440px;height:380px;left:290px;top:160px;">
-    <div class="title-bar"><div class="title-bar-text">📄 Native Finance Tracker</div>
+  <div class="window win98-raised" id="win-proj-detail-7" data-title="Finance Tracker App" style="width:520px;height:640px;left:290px;top:110px;">
+    <div class="title-bar"><div class="title-bar-text">📄 Finance Tracker App</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-7')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-7')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-7')">✕</button></div>
     </div>
     <div class="window-body detail-body">
       <span class="status-pill">Work in Progress</span>
-      <h2>Native Finance Tracker</h2>
+      <h2>Finance Tracker App</h2>
       <div class="meta">React Native · Firebase · Firestore</div>
-      <p>A green-themed personal finance tracker app built with React Native, backed by Firebase and Firestore for real-time data sync across sessions.</p>
+      <p>A green-themed personal finance tracker app built with React Native, backed by Firebase Authentication and Cloud Firestore for real-time data sync across sessions.</p>
       <div class="links"><a href="https://github.com/MahnoorAhmed999/Native-Finance-Tracker" target="_blank" rel="noopener">Source code</a></div>
-      <div class="detail-gallery">
-        <img src="mobile-dev1.jpeg" alt="Native Finance Tracker photo 1" loading="lazy">
-        <img src="mobile-dev2.jpeg" alt="Native Finance Tracker photo 2" loading="lazy">
+      <div class="detail-gallery portrait">
+        <img src="app1.jpeg" alt="Finance Tracker screen 1" loading="lazy">
+        <img src="app2.jpeg" alt="Finance Tracker screen 2" loading="lazy">
+        <img src="app2.5.jpeg" alt="Finance Tracker screen 2.5" loading="lazy">
+        <img src="app3.jpeg" alt="Finance Tracker screen 3" loading="lazy">
+        <img src="app4.jpeg" alt="Finance Tracker screen 4" loading="lazy">
+        <img src="app5.jpeg" alt="Finance Tracker screen 5" loading="lazy">
       </div>
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-8" data-title="EcoClean" style="width:460px;height:460px;left:320px;top:190px;">
-    <div class="title-bar"><div class="title-bar-text">📄 EcoClean</div>
+  <div class="window win98-raised" id="win-proj-detail-8" data-title="EcoClean Website" style="width:460px;height:460px;left:320px;top:190px;">
+    <div class="title-bar"><div class="title-bar-text">📄 EcoClean Website</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-8')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-8')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-8')">✕</button></div>
     </div>
     <div class="window-body detail-body">
-      <h2>EcoClean</h2>
+      <h2>EcoClean Website</h2>
       <div class="meta">Frontend · Backend · Deployed</div>
       <p>Pakistan has trash pickers in almost every city, yet litter and overflowing bins are still everywhere — the collection system exists but doesn't actually work. EcoClean is a full-stack platform designed to fix that by directly connecting the three sides of the problem: trash pickers, homeowners who need the service, and business/government-level stakeholders who could scale it.</p>
       <p><b>How it works:</b></p>
@@ -1199,12 +1209,12 @@ a{ color:var(--link); }
     </div>
   </div>
 
-  <div class="window win98-raised" id="win-proj-detail-9" data-title="AI Checkers Board" style="width:460px;height:460px;left:200px;top:200px;">
-    <div class="title-bar"><div class="title-bar-text">📄 AI Checkers Board</div>
+  <div class="window win98-raised" id="win-proj-detail-9" data-title="AI Checkers Board [Hardware]" style="width:460px;height:460px;left:200px;top:200px;">
+    <div class="title-bar"><div class="title-bar-text">📄 AI Checkers Board [Hardware]</div>
       <div class="title-btns"><button class="title-btn" onclick="minimizeWindow('proj-detail-9')">_</button><button class="title-btn" onclick="toggleMaximize('proj-detail-9')">▢</button><button class="title-btn" onclick="closeWindow('proj-detail-9')">✕</button></div>
     </div>
     <div class="window-body detail-body">
-      <h2>AI Intelligent Checkers Board</h2>
+      <h2>AI Checkers Board [Hardware]</h2>
       <div class="meta">Hardware · AI · Arduino</div>
       <p>Designed and built an AI-driven physical checkers board integrating hardware sensors with checkers game logic, combining embedded systems programming with adversarial search algorithms.</p>
       <div class="detail-gallery">
